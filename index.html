@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,9 +15,11 @@
         - default-src 'self': Only allows resources from the same origin as the document.
         - script-src 'self': Allows scripts only from the same origin.
         - style-src 'self' 'unsafe-inline': Allows styles from same origin and inline styles (if any).
-        - img-src 'self' data:: Allows images from the same origin. `data:` is included for potential inline SVGs or tiny data URIs if used.
-          Remember to update this if you use external image hosting or CDNs.
-        - font-src 'self': Allows fonts from the same origin.
+          If you use Google Fonts or other external fonts, you would need to add their domain here.
+        - img-src 'self': Allows images only from the same origin.
+          If you use external images, you would need to add their domain here.
+        - font-src 'self': Allows fonts only from the same origin.
+          If you use external fonts, you would need to add their domain here.
         - frame-ancestors 'none': Prevents your site from being embedded in iframes on other domains (Clickjacking protection).
         - object-src 'none': Disables <object>, <embed>, and <applet> elements.
         - base-uri 'self': Restricts the URLs that can be used in the <base> element.
@@ -28,7 +30,7 @@
         default-src 'self';
         script-src 'self';
         style-src 'self' 'unsafe-inline';
-        img-src 'self' data:;
+        img-src 'self';
         font-src 'self';
         frame-ancestors 'none';
         object-src 'none';
@@ -44,40 +46,60 @@
     </header>
 
     <main>
-        <section>
+        <section class="about-section">
             <h2>About Evora Tales</h2>
             <p>Evora Tales is an independent media collective exploring the intersections of people, nature, travel, and place. We create written narratives, print editions, and documentaries that highlight culture, environmental conservation, and sustainable development.</p>
             <p>Our work aims to inspire thoughtful travel, advocate for environmental stewardship, and reveal the deep connections between culture and landscape.</p>
         </section>
 
-        <section>
+        <section class="vagabonds-section">
             <h2>Eyes of Vagabonds</h2>
-            <p>Moments fade. Meaning stays. We capture both.</p>
+            <p class="italic-tagline">Moments fade. Meaning stays. We capture both.</p>
             <p>Eyes of Vagabonds is the visual wing of Evora Tales, dedicated to capturing the quiet, layered beauty of the world through photography and film. We document moments of place, people, and movement — not for spectacle, but for presence.</p>
             <p>From landscapes shaped by time to everyday gestures, our lens seeks what often goes unseen. Rooted in curiosity, Eyes of Vagabonds tells visual stories that reflect ecological awareness, cultural depth, and a sense of wandering with intention.</p>
         </section>
 
-        <section class="gallery">
-            <!-- Gallery Item 1 -->
-            <img src="images/gallery_1.jpg" alt="Nature landscape">
-            <!-- Gallery Item 2 -->
-            <img src="images/gallery_2.jpg" alt="Cultural scene">
-            <!-- Gallery Item 3 -->
-            <img src="images/gallery_3.jpg" alt="Travel moment">
-            <!-- Gallery Item 4 (New addition) -->
-            <img src="images/gallery_4.jpg" alt="Additional moment">
+        <section class="gallery-section">
+            <h2>Our Visual Journey</h2>
+            <div class="gallery-grid">
+                <!-- Gallery Item 1: Nature Image -->
+                <div class="gallery-item">
+                    <img src="images/gallery_nature.jpg" alt="Vast mountainous landscape">
+                    <div class="image-overlay">
+                        <p class="overlay-text">Nature's Embrace</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 2: Public Life Image -->
+                <div class="gallery-item">
+                    <img src="images/gallery_public_life.jpg" alt="People in a bustling city market">
+                    <div class="image-overlay">
+                        <p class="overlay-text">Vibrant Public Life</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 3: Wildlife Image -->
+                <div class="gallery-item">
+                    <img src="images/gallery_wildlife.jpg" alt="Close-up of an eagle in flight">
+                    <div class="image-overlay">
+                        <p class="overlay-text">Wild Encounters</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 4: Travel Moment Image -->
+                <div class="gallery-item">
+                    <img src="images/gallery_travel.jpg" alt="Person exploring ancient ruins">
+                    <div class="image-overlay">
+                        <p class="overlay-text">Journey's Tranquility</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Evora Tales. All rights reserved.</p>
-        <!-- Social Media Links removed as per request -->
+        <div class="social-links">
+            <a href="https://www.instagram.com/your-instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
     </footer>
 </body>
 </html>
-
-    
-  
-
-
-        
