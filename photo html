@@ -1,5 +1,4 @@
-
-         <section class="gallery">
+        <section class="gallery">
             <!-- Gallery Item 1 -->
             <img src="images/gallery_1.jpg" alt="Nature landscape">
             <!-- Gallery Item 2 -->
@@ -9,4 +8,5 @@
             <!-- Gallery Item 4 (New addition) -->
             <img src="images/gallery_4.jpg" alt="Additional moment">
         </section>
-              
+
+      
