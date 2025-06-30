@@ -1,23 +1,26 @@
-/* Basic reset and font */
+Google Fonts - Inter (Optional: Can be removed if you prefer default Georgia, serif) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* Base Styles */
 body {
-    font-family: Georgia, serif;
+    font-family: 'Inter', Georgia, serif; /* Using Inter as primary, fallback to Georgia */
     background-color: #f4f4f4;
     color: #333;
     margin: 0;
     padding: 0;
-    line-height: 1.6; /* Added for better readability */
+    line-height: 1.6; /* For better readability */
 }
 
 /* Header Styles */
 header {
     background: white;
-    padding: 40px;
+    padding: 40px 20px; /* Added horizontal padding */
     text-align: center;
     border-bottom: 2px solid #ddd;
 }
 
 header h1 {
-    font-size: 2.5em; /* Adjust as needed */
+    font-size: 2.5em;
     margin-bottom: 10px;
     color: #222;
 }
@@ -30,12 +33,12 @@ header h1 {
 
 /* Main Content Area */
 main {
-    max-width: 800px;
-    margin: 20px auto; /* Added top/bottom margin */
+    max-width: 960px; /* Increased max-width for content */
+    margin: 30px auto; /* Added top/bottom margin and centered */
     padding: 20px;
     background: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05); /* Optional subtle shadow */
-    border-radius: 8px; /* Optional rounded corners for main content */
+    box-shadow: 0 0 15px rgba(0,0,0,0.08); /* Slightly stronger shadow */
+    border-radius: 10px; /* More rounded corners */
 }
 
 /* Section Headings */
@@ -43,7 +46,7 @@ h2 {
     margin-top: 30px;
     color: #222;
     font-size: 2em;
-    text-align: center; /* Center section titles */
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -52,54 +55,166 @@ p {
     margin-bottom: 1em;
 }
 
-/* Gallery Section */
-.gallery {
-    display: flex;
-    flex-wrap: wrap; /* Allows images to wrap to the next line */
-    gap: 10px;
-    margin-top: 30px;
-    justify-content: center; /* Centers images within the flex container */
-    padding: 10px 0; /* Add some padding around the gallery */
+.italic-tagline { /* Specific style for 'Moments fade. Meaning stays.' */
+    font-style: italic;
+    color: #555;
+    text-align: center;
+    margin-bottom: 1.5em; /* More space below */
 }
 
-.gallery img {
-    width: 100%; /* Default to full width on small screens */
-    max-width: 260px; /* Max width for larger screens */
-    height: auto; /* Maintain aspect ratio */
+/* Specific Section Styles (About, Vagabonds) */
+.about-section,
+.vagabonds-section {
+    padding: 20px 0; /* Add vertical padding */
+    margin-bottom: 30px; /* Space between sections */
+    text-align: center; /* Center text within these sections */
+}
+
+/* Image Gallery Section */
+.gallery-section {
+    padding: 30px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid for images */
+    gap: 15px; /* Space between grid items */
+    justify-items: center; /* Center items in the grid cells */
+}
+
+.gallery-item {
+    position: relative;
     border-radius: 8px;
-    border: 1px solid #ccc;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for items */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
 }
 
-.gallery img:hover {
-    transform: scale(1.03); /* Slightly enlarge image on hover */
+.gallery-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
 }
 
-/* Responsive adjustments for gallery images */
-@media (min-width: 600px) { /* On screens wider than 600px, show 2 images per row */
-    .gallery img {
-        width: calc(50% - 15px); /* Two images per row, accounting for gap */
-    }
+.gallery-image {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    display: block; /* Remove extra space below image */
 }
 
-@media (min-width: 800px) { /* On screens wider than 800px, revert to original max-width behavior for more flexibility */
-    .gallery img {
-        width: auto; /* Let max-width control it */
-    }
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
+
+.gallery-item:hover .image-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.overlay-text {
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    transform: translateY(20px); /* Start slightly below */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover .overlay-text {
+    transform: translateY(0); /* Slide up on hover */
+}
+
 
 /* Footer Styles */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     font-size: 14px;
     color: #777;
-    margin-top: 40px; /* Add some space above footer */
-    background-color: #f0f0f0; /* Slightly different background for footer */
+    margin-top: 50px; /* More space above footer */
+    background-color: #f0f0f0;
     border-top: 1px solid #e0e0e0;
 }
 
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #007bff; /* A blue hover color */
+}
+
+/* Basic Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    main {
+        margin: 20px 15px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+
+    main {
+        margin: 15px 10px;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Stack images on very small screens */
+    }
+
+    .gallery-image {
+        height: 180px;
+    }
+}
+
+    
 
 
 
