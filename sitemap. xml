@@ -6,16 +6,4 @@
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
    </url>
-   <url>
-      <loc>https://evoratales.com/#about</loc>
-      <lastmod>2025-06-30</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://evoratales.com/#eyes-of-vagabonds</loc>
-      <lastmod>2025-06-30</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
 </urlset>
