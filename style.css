@@ -1,54 +1,105 @@
+/* Basic reset and font */
 body {
-  font-family: Georgia, serif;
-  background-color: #f4f4f4;
-  color: #333;
-  margin: 0;
-  padding: 0;
+    font-family: Georgia, serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Added for better readability */
 }
 
+/* Header Styles */
 header {
-  background: white;
-  padding: 40px;
-  text-align: center;
-  border-bottom: 2px solid #ddd;
+    background: white;
+    padding: 40px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+}
+
+header h1 {
+    font-size: 2.5em; /* Adjust as needed */
+    margin-bottom: 10px;
+    color: #222;
 }
 
 .tagline {
-  font-style: italic;
-  color: #666;
+    font-style: italic;
+    color: #666;
+    font-size: 1.1em;
 }
 
+/* Main Content Area */
 main {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  background: white;
+    max-width: 800px;
+    margin: 20px auto; /* Added top/bottom margin */
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05); /* Optional subtle shadow */
+    border-radius: 8px; /* Optional rounded corners for main content */
 }
 
+/* Section Headings */
 h2 {
-  margin-top: 30px;
-  color: #222;
+    margin-top: 30px;
+    color: #222;
+    font-size: 2em;
+    text-align: center; /* Center section titles */
+    margin-bottom: 20px;
 }
 
+/* Paragraphs */
+p {
+    margin-bottom: 1em;
+}
+
+/* Gallery Section */
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 30px;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap; /* Allows images to wrap to the next line */
+    gap: 10px;
+    margin-top: 30px;
+    justify-content: center; /* Centers images within the flex container */
+    padding: 10px 0; /* Add some padding around the gallery */
 }
 
 .gallery img {
-  width: 100%;
-  max-width: 260px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+    width: 100%; /* Default to full width on small screens */
+    max-width: 260px; /* Max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  color: #777;
+.gallery img:hover {
+    transform: scale(1.03); /* Slightly enlarge image on hover */
 }
+
+/* Responsive adjustments for gallery images */
+@media (min-width: 600px) { /* On screens wider than 600px, show 2 images per row */
+    .gallery img {
+        width: calc(50% - 15px); /* Two images per row, accounting for gap */
+    }
+}
+
+@media (min-width: 800px) { /* On screens wider than 800px, revert to original max-width behavior for more flexibility */
+    .gallery img {
+        width: auto; /* Let max-width control it */
+    }
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #777;
+    margin-top: 40px; /* Add some space above footer */
+    background-color: #f0f0f0; /* Slightly different background for footer */
+    border-top: 1px solid #e0e0e0;
+}
+
+
+
 
