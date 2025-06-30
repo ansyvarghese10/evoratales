@@ -1,12 +1,1 @@
-        <section class="gallery">
-            <!-- Gallery Item 1 -->
-            <img src="images/gallery_1.jpg" alt="Nature landscape">
-            <!-- Gallery Item 2 -->
-            <img src="images/gallery_2.jpg" alt="Cultural scene">
-            <!-- Gallery Item 3 -->
-            <img src="images/gallery_3.jpg" alt="Travel moment">
-            <!-- Gallery Item 4 (New addition) -->
-            <img src="images/gallery_4.jpg" alt="Additional moment">
-        </section>
-
-      
+       
