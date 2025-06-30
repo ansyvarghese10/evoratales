@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evora Tales - Nature Immortal. Stories Eternal. Voices Protected.</title>
+    <title>Evora Tales</title>
+    <!-- Link to your external stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
 
     <!--
         Content Security Policy (CSP) Meta Tag:
-        This is crucial for preventing various types of attacks, especially Cross-Site Scripting (XSS).
+        Crucial for preventing various types of attacks like Cross-Site Scripting (XSS).
         It instructs the browser to only load resources from specified sources.
 
-        - default-src 'self': Only allows resources (scripts, images, fonts, etc.) from the same origin as the document.
-        - script-src 'self' https://cdn.tailwindcss.com: Allows scripts from the same origin and Tailwind CSS CDN.
-        - style-src 'self' 'unsafe-inline' https://fonts.googleapis.com: Allows styles from same origin,
-          inline styles (needed for the <style> block for Inter font), and Google Fonts.
-        - img-src 'self' https://placehold.co: Allows images from the same origin and placehold.co (for placeholders).
-          Remember to replace 'https://placehold.co' with your actual image hosting domains when you replace placeholders.
-        - font-src 'self' https://fonts.gstatic.com: Allows fonts from the same origin and Google Fonts CDN.
+        - default-src 'self': Only allows resources from the same origin as the document.
+        - script-src 'self': Allows scripts only from the same origin.
+        - style-src 'self' 'unsafe-inline': Allows styles from same origin and inline styles (if any).
+        - img-src 'self' data:: Allows images from the same origin. `data:` is included for potential inline SVGs or tiny data URIs if used.
+          Remember to update this if you use external image hosting or CDNs.
+        - font-src 'self': Allows fonts from the same origin.
         - frame-ancestors 'none': Prevents your site from being embedded in iframes on other domains (Clickjacking protection).
-          This is a strong protection; if you ever need to allow embedding, change this accordingly.
         - object-src 'none': Disables <object>, <embed>, and <applet> elements.
         - base-uri 'self': Restricts the URLs that can be used in the <base> element.
         - form-action 'self': Restricts the URLs that can be used as the target for form submissions.
@@ -26,151 +26,58 @@
     -->
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
-        script-src 'self' https://cdn.tailwindcss.com;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        img-src 'self' https://placehold.co;
-        font-src 'self' https://fonts.gstatic.com;
+        script-src 'self';
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data:;
+        font-src 'self';
         frame-ancestors 'none';
         object-src 'none';
         base-uri 'self';
         form-action 'self';
         upgrade-insecure-requests;
     ">
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts - Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Custom styles to ensure Inter font is applied where Tailwind might not directly cover it */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased leading-relaxed">
-
-    <!-- Header Section -->
-    <header class="bg-white shadow-sm py-6 md:py-8 sticky top-0 z-50">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <!-- Site Title/Logo -->
-            <div class="flex items-center space-x-2">
-                <!-- Example of an inline SVG icon for a natural/leaf motif -->
-                <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 10c0-1.657-1.343-3-3-3s-3 1.343-3 3 1.343 3 3 3 3-1.343 3-3z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13a3 3 0 100-6 3 3 0 000 6z"></path>
-                </svg>
-                <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">Evora Tales</h1>
-            </div>
-            <!-- Tagline for larger screens -->
-            <p class="hidden md:block text-lg italic text-gray-600">Nature immortal. Stories eternal. Voices protected.</p>
-            <!-- Placeholder for Mobile Navigation Toggle (if needed in the future) -->
-            <button class="md:hidden p-2 text-gray-700 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
-        </div>
-        <!-- Tagline for smaller screens -->
-        <p class="md:hidden text-center text-md italic text-gray-600 mt-2 px-4">Nature immortal. Stories eternal. Voices protected.</p>
+<body>
+    <header>
+        <h1>Evora Tales</h1>
+        <p class="tagline">Nature immortal. Stories eternal. Voices protected.</p>
     </header>
 
-    <!-- Hero Section with Background Image -->
-    <section class="relative bg-cover bg-center h-[50vh] md:h-[60vh] flex items-center justify-center text-white"
-        style="background-image: url('https://placehold.co/1200x600/222222/FFFFFF?text=Scenic+Landscape');">
-        <div class="absolute inset-0 bg-black opacity-40 rounded-lg"></div> <!-- Overlay for text readability -->
-        <div class="relative z-10 text-center px-4">
-            <!-- Adjusted H2 for better visibility and rephrased 'untamed' -->
-            <h2 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Discover Authentic Narratives</h2>
-            <!-- Adjusted P for better visibility -->
-            <p class="text-xl md:text-2xl font-light max-w-2xl mx-auto drop-shadow-md">
-                Exploring the dance between people, nature, and place.
-            </p>
-            <!-- Removed 'Learn More' button as per request -->
-        </div>
-    </section>
-
-    <main class="container mx-auto px-4 py-12 md:py-16">
-
-        <!-- About Evora Tales Section -->
-        <section id="about" class="bg-white p-8 md:p-10 rounded-xl shadow-lg mb-12">
-            <h2 class="text-4xl font-bold text-gray-900 mb-6 text-center">About Evora Tales</h2>
-            <div class="text-center"> <!-- Adjusted layout for single column -->
-                <p class="text-lg text-gray-700 mb-4">
-                    Evora Tales is an independent media collective exploring the intersections of people, nature, travel, and place. We create written narratives, print editions, and documentaries that highlight culture, environmental conservation, and sustainable development.
-                </p>
-                <p class="text-lg text-gray-700">
-                    Our work aims to inspire thoughtful travel, advocate for environmental stewardship, and reveal the deep connections between culture and landscape. Through rich storytelling, we bring to light the untold narratives of our planet.
-                </p>
-            </div>
-            <!-- Removed 'About Us Image' as per request -->
+    <main>
+        <section>
+            <h2>About Evora Tales</h2>
+            <p>Evora Tales is an independent media collective exploring the intersections of people, nature, travel, and place. We create written narratives, print editions, and documentaries that highlight culture, environmental conservation, and sustainable development.</p>
+            <p>Our work aims to inspire thoughtful travel, advocate for environmental stewardship, and reveal the deep connections between culture and landscape.</p>
         </section>
 
-        <!-- Eyes of Vagabonds Section -->
-        <section class="bg-white p-8 md:p-10 rounded-xl shadow-lg mb-12">
-            <h2 class="text-4xl font-bold text-gray-900 mb-6 text-center">Eyes of Vagabonds</h2>
-            <div class="text-center"> <!-- Adjusted layout for single column -->
-                <p class="text-lg italic text-gray-600 mb-4">Moments fade. Meaning stays. We capture both.</p>
-                <p class="text-lg text-gray-700 mb-4">
-                    Eyes of Vagabonds is the visual wing of Evora Tales, dedicated to capturing the quiet, layered beauty of the world through photography and film. We document moments of place, people, and movement — not for spectacle, but for presence.
-                </p>
-                <p class="text-lg text-gray-700">
-                    From landscapes shaped by time to everyday gestures, our lens seeks what often goes unseen. Rooted in curiosity, Eyes of Vagabonds tells visual stories that reflect ecological awareness, cultural depth, and a sense of wandering with intention.
-                </p>
-            </div>
-            <!-- Removed 'Eyes of Vagabonds Image' as per request -->
+        <section>
+            <h2>Eyes of Vagabonds</h2>
+            <p>Moments fade. Meaning stays. We capture both.</p>
+            <p>Eyes of Vagabonds is the visual wing of Evora Tales, dedicated to capturing the quiet, layered beauty of the world through photography and film. We document moments of place, people, and movement — not for spectacle, but for presence.</p>
+            <p>From landscapes shaped by time to everyday gestures, our lens seeks what often goes unseen. Rooted in curiosity, Eyes of Vagabonds tells visual stories that reflect ecological awareness, cultural depth, and a sense of wandering with intention.</p>
         </section>
 
-        <!-- Image Gallery Section -->
-        <section class="bg-white p-8 md:p-10 rounded-xl shadow-lg">
-            <h2 class="text-4xl font-bold text-gray-900 mb-8 text-center">Our Visual Journey</h2>
-            <!-- Updated grid layout to potentially accommodate 4 images gracefully -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
-                <!-- Gallery Item: Nature Image -->
-                <div class="relative group rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <img src="https://placehold.co/600x400/C0C0C0/333333?text=Nature+Landscape" alt="Vast mountainous landscape" class="w-full h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300 flex items-end p-4">
-                        <p class="text-white text-lg font-semibold transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">Nature's Embrace</p>
-                    </div>
-                </div>
-                <!-- Gallery Item: Public Life Image -->
-                <div class="relative group rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <img src="https://placehold.co/600x400/A0A0A0/333333?text=Cultural+Celebration" alt="Traditional cultural festival" class="w-full h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300 flex items-end p-4">
-                        <p class="text-white text-lg font-semibold transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">Vibrant Public Life</p>
-                    </div>
-                </div>
-                <!-- Gallery Item: Wildlife Image -->
-                <div class="relative group rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <img src="https://placehold.co/600x400/707070/FFFFFF?text=Wildlife+Close-up" alt="Close-up of a bird in its natural habitat" class="w-full h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300 flex items-end p-4">
-                        <p class="text-white text-lg font-semibold transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">Wild Encounters</p>
-                    </div>
-                </div>
-                <!-- New Gallery Item: Travel Moment -->
-                <div class="relative group rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <img src="https://placehold.co/600x400/555555/FFFFFF?text=Travel+Moment" alt="Person on a remote beach" class="w-full h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300 flex items-end p-4">
-                        <p class="text-white text-lg font-semibold transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">Journey's Tranquility</p>
-                    </div>
-                </div>
-            </div>
+        <section class="gallery">
+            <!-- Gallery Item 1 -->
+            <img src="images/gallery_1.jpg" alt="Nature landscape">
+            <!-- Gallery Item 2 -->
+            <img src="images/gallery_2.jpg" alt="Cultural scene">
+            <!-- Gallery Item 3 -->
+            <img src="images/gallery_3.jpg" alt="Travel moment">
+            <!-- Gallery Item 4 (New addition) -->
+            <img src="images/gallery_4.jpg" alt="Additional moment">
         </section>
-
     </main>
 
-    <!-- Footer Section -->
-    <footer class="bg-gray-900 text-white py-8 mt-12 rounded-t-lg shadow-inner">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-sm md:text-base mb-2">&copy; 2025 Evora Tales. All rights reserved.</p>
-            <p class="text-sm text-gray-400">Crafting narratives that protect and inspire.</p>
-            <!-- Optional: Social Media Links (placeholders) -->
-            <div class="flex justify-center space-x-6 mt-4">
-                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Facebook</a>
-                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Instagram</a>
-                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Twitter</a>
-            </div>
-        </div>
+    <footer>
+        <p>&copy; 2025 Evora Tales. All rights reserved.</p>
+        <!-- Social Media Links removed as per request -->
     </footer>
-
 </body>
 </html>
+
+    
+  
+
+
+        
