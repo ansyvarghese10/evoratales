@@ -3,16 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evora Tales - Nature immortal. Stories eternal. Voices protected.</title>
+    <title>Evora Tales - Cosmic Greens & Blues Design</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #1a1a1a; /* Dark background for the body */
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a; /* Deep dark background (black) */
+            color: #e0e0e0; /* Light grey text */
         }
-        /* Custom styles can be added here if needed, but Tailwind is preferred */
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif; /* Modern sans-serif for headings */
+            font-weight: 700;
+        }
+        .text-cosmic-green {
+            color: #2ecc71; /* Vibrant emerald green */
+        }
+        .text-cosmic-blue {
+            color: #3498db; /* Peter river blue */
+        }
+        .border-cosmic-green {
+            border-color: #2ecc71;
+        }
+        .border-cosmic-blue {
+            border-color: #3498db;
+        }
+        .hover\:text-cosmic-green-light:hover {
+            color: #58d68d;
+        }
+        .hover\:text-cosmic-blue-light:hover {
+            color: #5dade2;
+        }
+        .section-card-cosmic {
+            background-color: #2c3e50; /* Dark blue-grey for cards */
+            border-radius: 1rem; /* Softly rounded corners */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Pronounced shadow */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .section-card-cosmic:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        .hero-gradient-cosmic {
+            background-image: linear-gradient(to right, #1a2a6c, #2ecc71, #3498db); /* Blue to Green to Blue gradient */
+            color: #ffffff;
+        }
+        /* Security Note: For static HTML sites, vulnerabilities are primarily mitigated by secure hosting (GitHub Pages),
+           HTTPS, and proper external link attributes (rel="noopener noreferrer"), all of which are included.
+           No user inputs or server-side logic are present in this code. */
     </style>
 
     <!-- Favicon -->
@@ -28,70 +67,46 @@
       "name": "Evora Tales",
       "url": "https://evoratales.com/",
       "logo": "https://evoratales.com/images/evora-tales-logo.png"
-      // IMPORTANT: Make sure you place your 'evora-tales-logo.png' file inside the 'images' folder in your GitHub repo.
-      // Replace 'evora-tales-logo.png' with your actual logo filename if it's different.
     }
     </script>
 </head>
-<body class="text-gray-200"> <!-- Light grey text for dark background -->
+<body class="text-gray-200">
 
     <!-- Header Section -->
-    <header class="bg-gray-900 shadow-lg py-4 px-4 sm:px-6 lg:px-8 rounded-b-lg">
+    <header class="bg-gray-900 shadow-xl py-4 px-4 sm:px-6 lg:px-8 rounded-b-xl">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-extrabold text-green-500 tracking-tight">Evora Tales</h1>
+            <h1 class="text-3xl font-extrabold text-cosmic-green tracking-wide">Evora Tales</h1>
             <nav>
-                <!-- Simple navigation - can be expanded if more pages are added -->
-                <a href="#about" class="text-lg font-medium text-gray-400 hover:text-green-500 mx-2 sm:mx-4">About</a>
-                <a href="#eyes-of-vagabonds" class="text-lg font-medium text-gray-400 hover:text-green-500 mx-2 sm:mx-4">Eyes of Vagabonds</a>
-                <a href="#founder" class="text-lg font-medium text-gray-400 hover:text-green-500 mx-2 sm:mx-4">Founder</a>
+                <a href="#about" class="text-lg font-medium text-gray-400 hover:text-cosmic-green-light mx-2 sm:mx-4 transition duration-300">About</a>
+                <a href="#founder" class="text-lg font-medium text-gray-400 hover:text-cosmic-green-light mx-2 sm:mx-4 transition duration-300">Founder</a>
+                <a href="#visual-stories" class="text-lg font-medium text-gray-400 hover:text-cosmic-green-light mx-2 sm:mx-4 transition duration-300">Visual Stories</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-r from-gray-800 to-green-900 text-white py-20 px-4 sm:px-6 lg:px-8 rounded-xl mx-4 my-8">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-5xl sm:text-6xl font-bold leading-tight mb-4 animate-fade-in-down">Nature immortal. Stories eternal. Voices protected.</h2>
-            <p class="text-xl sm:text-2xl font-light opacity-90 animate-fade-in-up">Exploring the intersections of people, nature, travel, and place.</p>
+    <section class="relative hero-gradient-cosmic text-white py-28 px-4 sm:px-6 lg:px-8 rounded-2xl mx-4 my-8 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-5xl sm:text-6xl font-bold leading-tight mb-6 animate-fade-in-down">Nature immortal. Stories eternal. Voices protected.</h2>
+            <p class="text-xl sm:text-2xl font-light opacity-90 animate-fade-in-up">Exploring the intersections of people, nature, travel, and wildlife.</p>
         </div>
     </section>
 
     <!-- About Evora Tales Section -->
-    <section id="about" class="max-w-5xl mx-auto bg-gray-800 p-8 sm:p-10 lg:p-12 shadow-lg rounded-xl my-8 text-gray-200">
-        <h3 class="text-4xl font-bold text-green-500 mb-6 border-b-2 border-green-700 pb-3">About Evora Tales</h3>
+    <section id="about" class="max-w-5xl mx-auto section-card-cosmic p-8 sm:p-10 lg:p-12 my-8 text-gray-200">
+        <h3 class="text-4xl font-bold text-cosmic-green mb-6 border-b-2 border-cosmic-green pb-3">About Evora Tales</h3>
         <p class="text-lg leading-relaxed mb-4">
-            Evora Tales is an independent media collective exploring the intersections of people, nature, travel, and place.
-            We create written narratives, print editions, and documentaries that highlight culture, environmental conservation, and sustainable development.
-        </p>
-        <p class="text-lg leading-relaxed">
-            Our work aims to inspire thoughtful travel, advocate for environmental stewardship, and reveal the deep connections between culture and landscape.
-        </p>
-    </section>
-
-    <!-- Eyes of Vagabonds Section -->
-    <section id="eyes-of-vagabonds" class="max-w-5xl mx-auto bg-gray-800 p-8 sm:p-10 lg:p-12 shadow-lg rounded-xl my-8 text-gray-200">
-        <h3 class="text-4xl font-bold text-green-500 mb-6 border-b-2 border-green-700 pb-3">Eyes of Vagabonds</h3>
-        <p class="text-lg leading-relaxed mb-4">
-            Moments fade. Meaning stays. We capture both.
-        </p>
-        <p class="text-lg leading-relaxed mb-4">
-            Eyes of Vagabonds is the visual wing of Evora Tales, dedicated to capturing the quiet, layered beauty of the world through photography and film.
-            We document moments of place, people, and movement — not for spectacle, but for presence.
-        </p>
-        <p class="text-lg leading-relaxed">
-            From landscapes shaped by time to everyday gestures, our lens seeks what often goes unseen. Rooted in curiosity,
-            Eyes of Vagabonds tells visual stories that reflect ecological awareness, cultural depth, and a sense of wandering with intention.
+            Evora Tales is an independent media collective exploring the intersections of people, nature, travel, and wildlife through narrative and visual storytelling. We create written narratives, print editions, and documentaries that highlight culture, environmental conservation, and sustainable development.
         </p>
     </section>
 
     <!-- About the Founder Section -->
-    <section id="founder" class="max-w-5xl mx-auto bg-gray-800 p-8 sm:p-10 lg:p-12 shadow-lg rounded-xl my-8 text-gray-200 flex flex-col sm:flex-row items-center sm:items-start gap-8">
+    <section id="founder" class="max-w-5xl mx-auto section-card-cosmic p-8 sm:p-10 lg:p-12 my-8 text-gray-200 flex flex-col sm:flex-row items-center sm:items-start gap-8">
         <div class="flex-shrink-0">
-            <img src="https://ansvarghese.in/wp-content/uploads/2025/05/website-jpg-1150x1536.webp" alt="Ans Y Varghese - Founder of Evora Tales" class="w-48 h-48 sm:w-64 sm:h-64 object-cover rounded-full shadow-md border-4 border-green-700">
-            <!-- The image source is now directly linked to the provided URL. -->
+            <img src="https://ansvarghese.in/wp-content/uploads/2025/05/website-jpg-1150x1536.webp" alt="Ans Y Varghese - Founder of Evora Tales" class="w-48 h-48 sm:w-64 sm:h-64 object-cover rounded-full shadow-md border-4 border-cosmic-blue">
         </div>
         <div>
-            <h3 class="text-4xl font-bold text-green-500 mb-6 border-b-2 border-green-700 pb-3">About the Founder</h3>
+            <h3 class="text-4xl font-bold text-cosmic-blue mb-6 border-b-2 border-cosmic-blue pb-3">About the Founder</h3>
             <p class="text-lg leading-relaxed mb-4">
                 Ans Y Varghese is a freelance photographer, writer, and traveler based in Kerala, India.
             </p>
@@ -100,49 +115,71 @@
                 he created Evora Tales to share moments that inspire awareness, connection, and creativity.
             </p>
             <p class="text-lg leading-relaxed">
-                Explore Ans's work at his portfolio website: <a href="https://ansvarghese.in" target="_blank" rel="noopener noreferrer" class="text-green-400 hover:text-green-300 underline">ansvarghese.in</a>
-                <!-- IMPORTANT: Replace "https://ansvarghese.in" with the actual URL of the founder's portfolio website. -->
+                Explore Ans's work at his portfolio website: <a href="https://ansvarghese.in" target="_blank" rel="noopener noreferrer" class="text-cosmic-blue hover:text-cosmic-blue-light underline">ansvarghese.in</a>
             </p>
         </div>
     </section>
 
-    <!-- Photo Showcase Section -->
-    <section class="max-w-5xl mx-auto py-8 px-4 sm:px-6 lg:px-8 my-8">
-        <h3 class="text-4xl font-bold text-center text-green-500 mb-8">Our Visual Stories</h3>
+    <!-- Photo Showcase Section - Expanded Gallery -->
+    <section id="visual-stories" class="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8 my-8">
+        <h3 class="text-4xl font-bold text-center text-cosmic-green mb-6">Our Visual Stories</h3>
+        <p class="text-lg leading-relaxed text-center mb-10">
+            Through both words and visuals, we tell grounded, immersive stories—capturing the beauty and complexity of the world through photography and film. Our work aims to inspire thoughtful travel, advocate for environmental stewardship, and reveal the deep connections between culture and the natural world.
+        </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <!-- Image 1: Nature landscape -->
-            <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
-                <img src="https://ansvarghese.in/wp-content/uploads/2025/05/Athirappally-Waterfalls-image-3-scaled.jpg" alt="Nature Landscape" class="w-full h-64 object-cover">
+            <!-- Gallery Item 1: Nature landscape -->
+            <div class="section-card-cosmic overflow-hidden transform transition duration-300 hover:scale-105">
+                <img src="https://ansvarghese.in/wp-content/uploads/2025/05/Athirappally-Waterfalls-image-3-scaled.jpg" alt="Majestic Athirappilly Waterfalls" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <p class="text-xl font-semibold text-gray-200">Nature Landscape</p>
+                    <p class="text-xl font-semibold text-gray-200">Athirappilly Waterfalls</p>
+                    <p class="text-sm text-gray-400 mt-1">Thrissur, Kerala</p>
                 </div>
             </div>
 
-            <!-- Image 2: Travel moment -->
-            <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
-                <img src="https://ansvarghese.in/wp-content/uploads/2025/05/Konni-Image-2.jpg" alt="Travel Moment" class="w-full h-64 object-cover">
+            <!-- Gallery Item 2: Travel moment -->
+            <div class="section-card-cosmic overflow-hidden transform transition duration-300 hover:scale-105">
+                <img src="https://ansvarghese.in/wp-content/uploads/2025/05/Konni-Image-2.jpg" alt="Mountain Road in Konni" class="w-full h-64 object-cover">
                 <div class="p-6">
-                    <p class="text-xl font-semibold text-gray-200">Travel Moment</p>
+                    <p class="text-xl font-semibold text-gray-200">Konni Mountain Road</p>
+                    <p class="text-sm text-gray-400 mt-1">Konni, Kerala</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-gray-900 text-gray-400 py-8 px-4 sm:px-6 lg:px-8 mt-12 rounded-t-lg">
+    <footer class="bg-gray-900 text-gray-400 py-8 px-4 sm:px-6 lg:px-8 mt-12 rounded-t-xl">
         <div class="max-w-7xl mx-auto text-center">
             <p class="text-lg mb-4">&copy; 2025 Evora Tales. All rights reserved.</p>
             <div class="flex justify-center space-x-6">
-                <!-- Instagram Icon and Link (Updated to a common outline style) -->
-                <a href="https://instagram.com/evoratales" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-green-500 transition duration-300">
+                <!-- Instagram Icon and Link -->
+                <a href="https://instagram.com/evoratales" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cosmic-green-light transition duration-300">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M12 0C8.74 0 8.333.01 7.02 0.05c-1.314.04-2.108.14-2.67.365-.57.22-1.017.477-1.477.937-.46.46-.717.907-.937 1.477-.22 0.562-.325 1.355-.365 2.67-.04 1.31-.05 1.717-.05 4.01s.01 2.71.05 4.01c.04 1.314.14 2.108.365 2.67.22.57.477 1.017.937 1.477.46.46.907.717 1.477.937.562.22 1.355.325 2.67.365 1.31.04 1.717.05 4.01.05s2.71-.01 4.01-.05c1.314-.04 2.108-.14 2.67-.365.57-.22 1.017-.477 1.477-.937.46-.46.717-.907.937-1.477.22-0.562.325-1.355.365-2.67.04-1.31.05-1.717.05-4.01s-.01-2.71-.05-4.01c-.04-1.314-.14-2.108-.365-2.67-.22-.57-.477-1.017-.937-1.477-.46-.46-.907-.717-1.477-.937C16.108 0.14 15.315.04 14.002 0.05c-1.31-.04-1.717-.05-4.01-.05Zm0 2.16c2.32 0 2.58.01 3.49.04 1.01.03 1.55.13 1.83.24.3.12.5.25.7.45.2.2.33.4.45.7.12.28.21.82.24 1.83.03.91.04 1.17.04 3.49s-.01 2.58-.04 3.49c-.03 1.01-.13 1.55-.24 1.83-.12.3-.25.5-.45.7-.2.2-.4.33-.7.45-.28.12-.82.21-1.83.24-.91.03-1.17.04-3.49.04s-2.58-.01-3.49-.04c-1.01-.03-1.55-.13-1.83-.24-.3-.12-.5-.25-.7-.45-.2-.2-.33-.4-.45-.7-.12-.28-.21-.82-.24-1.83-.03-.91-.04-1.17-.04-3.49s.01-2.58.04-3.49c.03-1.01.13-1.55.24-1.83.12-.3.25-.5.45-.7.2-.2.4-.33.7-.45.28-.12.82-.21 1.83-.24.91-.03 1.17-.04 3.49-.04Zm0 4.38a5.46 5.46 0 1 0 0 10.92 5.46 5.46 0 0 0 0-10.92Zm0 8.92a3.46 3.46 0 1 1 0-6.92 3.46 3.46 0 0 1 0 6.92ZM18.4 5.56a1.22 1.22 0 1 0 0 2.44 1.22 1.22 0 0 0 0-2.44Z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M12 0C8.74 0 8.333.01 7.02 0.05c-1.314.04-2.108.14-2.67.365-.57.22-1.017.477-1.477.937-.46.46-.717.907-.937 1.477-.22 0.562-.325 1.355-.365 2.67-.04 1.31-.05 1.717-.05 4.01s.01 2.71.05 4.01c.04 1.314.14 2.108.365 2.67.22.57.477 1.017.937 1.477.46.46.907.717 1.477.937.562.22 1.355.325 2.67.365 1.31.04 1.717.05 4.01.05s2.71-.01 4.01-.05c1.314-.04 2.108-.14 2.67-.365.57-.22 1.017-.477 1.477-.937.46-.46.717-.907.937-1.477.22-0.562.325-1.355.365-2.67.04-1.31.05-1.717.05-4.01s-.01-2.71-.05-4.01c-.04-1.314-.14-2.108-.365-2.67-.22-.57-.477-1.017-.937-1.477-.46-.46-.907-.717-1.477-.937C16.108 0.14 15.315.04 14.002 0.05c-1.31-.04-1.717-.05-4.01-.05Zm0 2.16c2.32 0 2.58.01 3.49.04 1.01.03 1.55.13 1.83.24.3.12.5.25.7.45.2.2.33.4.45.7.12.28.21.82.24 1.83.03.91.04 1.17.04 3.49s-.01 2.58-.04 3.49c-.03 1.01-.13 1.55-.24 1.83-.12.3-.25.5-.45.7-.2.2-.33.4-.45.7-.12.28-.21-.82-.24-1.83-.03-.91-.04-1.17-.04-3.49s.01-2.58.04-3.49c.03-1.01.13-1.55.24 1.83.12-.3.25-.5.45-.7.2-.2.4-.33.7-.45.28-.12.82-.21 1.83-.24.91-.03 1.17-.04 3.49-.04Zm0 4.38a5.46 5.46 0 1 0 0 10.92 5.46 5.46 0 0 0 0-10.92Zm0 8.92a3.46 3.46 0 1 1 0-6.92 3.46 3.46 0 0 1 0 6.92ZM18.4 5.56a1.22 1.22 0 1 0 0 2.44 1.22 1.22 0 0 0 0-2.44Z" clip-rule="evenodd" />
                     </svg>
                 </a>
                 <!-- LinkedIn Icon and Link -->
-                <a href="https://linkedin.com/company/evoratales" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-green-500 transition duration-300">
+                <a href="https://linkedin.com/company/evoratales" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cosmic-green-light transition duration-300">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <!-- Facebook Icon and Link -->
+                <a href="https://www.facebook.com/evoratales?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cosmic-blue-light transition duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.812c-3.235 0-4.188 1.504-4.188 4.035v2.965z"/>
+                    </svg>
+                </a>
+                <!-- Twitter Icon and Link -->
+                <a href="https://twitter.com/evoratales" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cosmic-blue-light transition duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.492 2.144-5.492 5.166 0 .405.042.8.112 1.185-4.579-.234-8.62-2.41-11.314-5.748-.474.817-.75 1.76-.75 2.766 0 1.783.95 3.344 2.376 4.269-.831-.029-1.612-.268-2.29-.63v.063c0 2.29 1.635 4.212 3.79 4.65-.39.108-.8.162-1.227.162-.3 0-.593-.028-.877-.082.676 2.08 2.648 3.606 4.983 3.646-1.62 1.27-3.66 2.015-5.89 2.015-.38 0-.75-.022-1.11-.065 2.093 1.343 4.56 2.134 7.24 2.134 8.706 0 13.436-6.692 13.436-12.428 0-.19-.004-.38-.01-.57.92-.667 1.725-1.493 2.36-2.438z"/>
+                    </svg>
+                </a>
+                <!-- Pinterest Icon and Link -->
+                <a href="https://www.pinterest.com/evoratales" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cosmic-blue-light transition duration-300">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12.017 0C5.388 0 0 5.39 0 12.017c0 4.468 2.942 8.27 7.042 9.707.51.09.69-.22.69-.482 0-.237-.01-.97-.015-1.895-2.858.62-3.454-1.22-3.454-1.22-.467-1.19-1.14-1.51-1.14-1.51-.93-.63.07-.616.07-.616 1.03.07 1.573 1.056 1.573 1.056.918 1.57 2.405 1.116 2.98.85.093-.66.36-1.116.657-1.372-2.288-.26-4.695-1.144-4.695-5.09 0-1.12.39-2.04 1.03-2.76-.104-.26-.448-1.306.097-2.724 0 0 .84-.277 2.75 1.05.798-.22 1.64-.33 2.48-.33.84 0 1.68.11 2.48.33 1.91-1.327 2.75-1.05 2.75-1.05.546 1.418.202 2.464.097 2.724.64.72 1.03 1.64 1.03 2.76 0 3.956-2.41 4.82-4.706 5.08.37.32.706.97.706 1.95 0 1.418-.013 2.56-.013 2.904 0 .265.176.577.696.483C21.058 20.287 24 16.486 24 12.017 24 5.39 18.612 0 12.017 0z"/>
                     </svg>
                 </a>
             </div>
@@ -152,8 +189,11 @@
 </body>
 </html>
 
- 
+  
 
-   
- 
+
+  
+
+  
+    
                
