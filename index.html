@@ -22,17 +22,14 @@
         .text-cosmic-blue { color: #3498db; }
         .border-cosmic-green { border-color: #2ecc71; }
         .border-cosmic-blue { border-color: #3498db; }
-        /* Tailwind's default hover effects will still apply if specified directly in classes,
-           but all custom transitions and transforms are removed from this style block. */
+        /* Removed all custom transitions and transforms for motion effects */
         .section-card-cosmic {
             background-color: #2c3e50;
             border-radius: 1rem;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            /* No hover effects that involve transform or transition */
         }
-        .section-card-cosmic:hover {
-            /* Only basic shadow change, no transform or explicit transition */
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-        }
+        /* Removed section-card-cosmic:hover rule for shadow change */
         .hero-gradient-cosmic {
             background-image: linear-gradient(to right, #1a2a6c, #2ecc71, #3498db);
             color: #ffffff;
@@ -61,7 +58,7 @@
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <h1 class="text-3xl font-extrabold text-cosmic-green tracking-wide">Evora Tales</h1>
             <nav>
-                <!-- Simplified nav link hover, no custom transition class -->
+                <!-- Nav links with simple hover color change (Tailwind default) -->
                 <a href="#about" class="text-lg font-medium text-gray-400 hover:text-cosmic-green-light mx-2 sm:mx-4">About</a>
                 <a href="#founder" class="text-lg font-medium text-gray-400 hover:text-cosmic-green-light mx-2 sm:mx-4">Founder</a>
                 <a href="#visual-stories" class="text-lg font-medium text-gray-400 hover:text-cosmic-green-light mx-2 sm:mx-4">Visual Stories</a>
@@ -72,7 +69,7 @@
     <!-- Hero Section -->
     <section class="relative hero-gradient-cosmic text-white py-28 px-4 sm:px-6 lg:px-8 rounded-2xl mx-4 my-8 text-center">
         <div class="max-w-4xl mx-auto">
-            <!-- Removed animation classes -->
+            <!-- No animation classes -->
             <h2 class="text-5xl sm:text-6xl font-bold leading-tight mb-6">Nature immortal. Stories eternal. Voices protected.</h2>
             <p class="text-xl sm:text-2xl font-light opacity-90">Exploring the intersections of people, nature, travel, and wildlife.</p>
         </div>
@@ -114,7 +111,6 @@
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <!-- Gallery Item 1: Nature landscape -->
-            <!-- Removed custom hover class, relying on section-card-cosmic hover only -->
             <div class="section-card-cosmic overflow-hidden">
                 <img src="https://ansvarghese.in/wp-content/uploads/2025/05/Athirappally-Waterfalls-image-3-scaled.jpg" alt="Majestic Athirappilly Waterfalls" class="w-full h-64 object-cover">
                 <div class="p-6">
@@ -124,7 +120,6 @@
             </div>
 
             <!-- Gallery Item 2: Travel moment -->
-            <!-- Removed custom hover class, relying on section-card-cosmic hover only -->
             <div class="section-card-cosmic overflow-hidden">
                 <img src="https://ansvarghese.in/wp-content/uploads/2025/05/Konni-Image-2.jpg" alt="Mountain Road in Konni" class="w-full h-64 object-cover">
                 <div class="p-6">
@@ -140,7 +135,7 @@
         <div class="max-w-7xl mx-auto text-center">
             <p class="text-lg mb-4">&copy; 2025 Evora Tales. All rights reserved.</p>
             <div class="flex justify-center space-x-6">
-                <!-- Simplified social icon hover, no custom transition class -->
+                <!-- Social icons with simple hover color change (Tailwind default) -->
                 <a href="https://linkedin.com/company/evoratales" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cosmic-green-light">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
@@ -176,6 +171,4 @@
 </body>
 </html>
 
-
-
-             
+      
