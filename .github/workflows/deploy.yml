@@ -1,5 +1,4 @@
-# This workflow will build and deploy a static site to GitHub Pages.
-# It is designed for simple HTML/CSS/JS sites and bypasses Jekyll by default.
+if: false # This line temporarily disables the workflow
 
 name: Deploy to GitHub Pages
 
@@ -10,21 +9,22 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest # Specifies the runner environment (Linux)
+    runs-on: ubuntu-latest # Specifies the runner environment (a virtual computer on GitHub)
+    timeout-minutes: 10 # This job will automatically cancel if it runs for more than 10 minutes.
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4 # Action to checkout your repository code
+      - name: Checkout repository code
+        uses: actions/checkout@v4 # This step gets your website files from your GitHub repository
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5 # Configures GitHub Pages for deployment
+      - name: Setup GitHub Pages environment
+        uses: actions/configure-pages@v5 # This step prepares the environment for GitHub Pages deployment
 
-      - name: Upload artifact
-        uses: actions:upload-pages-artifact@v3
+      - name: Upload website files as an artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: './' # This tells the action to upload the entire root directory of your repository as the artifact.
-                      # For a simple HTML site, your index.html and other assets are typically here.
+          path: './' # This tells the action to take ALL files from the root of your repository
+                      # (where your index.html is) and prepare them for deployment.
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions:deploy-pages@v4 # Action to deploy the uploaded artifact to GitHub Pages
+        uses: actions/deploy-pages@v4 # This step actually publishes your website files to GitHub Pages
